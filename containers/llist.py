@@ -18,6 +18,9 @@ class LList:
         return " -> ".join([str(x) for x in self])
 
     def __len__(self):
+        """
+        calculates the length of the linked list
+        """
         size = 0
         for i in self:
             size += 1
@@ -78,6 +81,9 @@ class LList:
                     raise IndexError
 
     def delete(self, index):
+        """
+        deletes element at indix
+        """
         node = self.head
         current = 0
         if index == 0:
@@ -98,6 +104,9 @@ class LList:
                 raise IndexError
 
     def index(self, value):
+        """
+        gets index of specified value
+        """
         if self.head is None:
             raise ValueError
         else:
